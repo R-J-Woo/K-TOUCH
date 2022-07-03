@@ -6,7 +6,7 @@ from django.db import models
 class User(models.Model):
     uid = models.CharField(verbose_name='아이디', max_length=64, unique=True)
     password = models.CharField(verbose_name='비밀번호', max_length=64)
-    phone_number = models.IntegerField(verbose_name='전화 번호', unique=True)
+    phone_number = models.IntegerField(verbose_name='전화 번호')
     name = models.CharField(verbose_name='이름', max_length=64)
     register_date = models.DateTimeField(
         verbose_name='가입 날짜', auto_now_add=True)

@@ -86,4 +86,4 @@ class LoginForm(forms.Form):
             if not check_password(password, user.password):  # password가 일치하지 않으면
                 self.add_error('password', '비밀번호를 틀렸습니다.')
             else:
-                self.username = user.name
+                self.uid = user.uid

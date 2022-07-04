@@ -1,5 +1,6 @@
 from django import forms
 from .models import Question
+from user.models import User
 
 CATEGORY_CHOICES = (
     ('시술문의', '시술문의'),
@@ -9,8 +10,8 @@ CATEGORY_CHOICES = (
 
 
 class QuestionForm(forms.Form):
-    category = forms.ChoiceField(widget=forms.Select(
-    ), choices=CATEGORY_CHOICES, label='문의 유형')
+    category = forms.ChoiceField(
+        widget=forms.Select(), choices=CATEGORY_CHOICES, label='문의 유형')
     contents = forms.CharField(
         error_messages={
             'required': '질문 내용을 입력해주세요.'

@@ -23,8 +23,8 @@
                             {% if field.name == 'contents' %}
                             <textarea rows="6" cols="70" name="{{ field.name }}" id="field.id_for_label"></textarea>
                             {% else %}
-                            <select class="form-select form-select-sm" required>
-                                <option selected>문의 유형을 선택해주세요</option>
+                            <select class="form-select form-select-sm" name="category">
+                                <option selected">------</option>
                                 {% for c1, c2 in form.category.field.choices %}
                                 <option value="{{ c1 }}">{{ c2 }}</option>
                                 {% endfor %}

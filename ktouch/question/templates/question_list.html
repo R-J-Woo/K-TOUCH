@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block contents %}
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bolder">문의 게시판</h1>
+        </div>
+        <div class="row gx-5">
+            <div class="col-xl-8">
+                <!-- FAQ Accordion 1-->
+                <!-- FAQ Accordion 2-->
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">문의 유형</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-dark">
+                        {% for question in object_list %}
+                        <tr>
+                            <th scope="row">{{ question.id }}</th>
+                            <th>{{ question.user }}</th>
+                            <th>{{ question.category }}</th>
+                            <th>{{ question.register_date|date:'Y-m-d H:i' }}</th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xl-4">
+                <div class="card border-0 bg-light mt-xl-5">
+                    <div class="card-body p-4 py-lg-5">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <div class="h6 fw-bolder">하시고 싶은 질문이 있으신가요?</div>
+                                <p class="text-muted mb-4">
+                                    질문해주세요!
+                                    <br />
+                                </p>
+                                <div class="d-grid"><button class="btn btn-secondary btn-lg" type="submit"><a href="#"
+                                            class="text-decoration-none text-white">질문하기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

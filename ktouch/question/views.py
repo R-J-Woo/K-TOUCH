@@ -9,6 +9,9 @@ from user.models import User
 
 class QuestionList(ListView):
     model = Question
+    paginate_by = 15
+    page_kwarg = 'page'
+    ordering = '-register_date'
     template_name = 'question_list.html'
 
 

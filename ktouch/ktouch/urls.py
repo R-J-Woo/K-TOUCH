@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from user.views import home, RegisterView, LoginView
-from question.views import QuestionList, QuestionCreate
+from question.views import QuestionList, QuestionCreate, QuestionDetail
+from answer.views import AnswerCreate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('login/', LoginView.as_view()),
     path('question/', QuestionList.as_view()),
     path('question/create/', QuestionCreate.as_view()),
+    path('question/<int:pk>/', QuestionDetail.as_view()),
+    path('answer/create/', AnswerCreate.as_view()),
 ]

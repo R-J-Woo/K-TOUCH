@@ -1,5 +1,5 @@
 from distutils.log import Log
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from .forms import RegisterForm, LoginForm
 # Create your views here.
@@ -23,3 +23,10 @@ class LoginView(FormView):
     def form_valid(self, form):  # 유효성 검사가 끝나고 세션 처리를 해주기 위함
         self.request.session['uid'] = form.uid
         return super().form_valid(form)
+
+
+def logout(request):
+    if 'uid' in request.session:
+        del(request.session['uid'])
+
+    return redirect('/')

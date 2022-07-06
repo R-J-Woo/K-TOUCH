@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from user.views import home, RegisterView, LoginView
+from user.views import home, RegisterView, LoginView, logout
 from question.views import QuestionList, QuestionCreate, QuestionDetail, faq
 from answer.views import AnswerCreate
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('', home),
     path('register/', RegisterView.as_view()),
     path('login/', LoginView.as_view()),
+    path('logout/', logout),
     path('question/', QuestionList.as_view()),
     path('question/create/', QuestionCreate.as_view()),
     path('question/<int:pk>/', QuestionDetail.as_view()),

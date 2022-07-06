@@ -43,3 +43,7 @@ class QuestionDetail(DetailView):
         context['form'] = AnswerForm(self.request)
         context['answers'] = Answer.objects.filter(question=self.kwargs['pk'])
         return context
+
+
+def faq(request):
+    return render(request, 'faq.html')

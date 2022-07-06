@@ -30,3 +30,7 @@ def logout(request):
         del(request.session['uid'])
 
     return redirect('/')
+
+
+def pricing(request):  # 가격
+    return render(request, 'pricing.html')

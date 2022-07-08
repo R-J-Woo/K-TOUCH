@@ -30,6 +30,14 @@
                         <p class="fs-5 mb-4 py-5 px-4 border-top border-bottom border-dark">{{ question.contents }}</p>
 
                     </section>
+                    <span>
+                        <button type="submit" class="btn btn-primary mt-3 mb-lg-5"><a
+                                href="/question/{{ question.id }}/update/"
+                                class="text-white text-decoration-none">수정하기</a></button>
+                        <button type="submit" class="btn btn-primary mt-3 mb-lg-5"><a
+                                href="/question/{{ question.id }}/delete/"
+                                class="text-white text-decoration-none">삭제하기</a></button>
+                    </span>
                 </article>
                 <!-- Comments section-->
                 <section>

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, UpdateView
 from .models import Question
 from .forms import QuestionForm
 from answer.forms import RegisterForm as AnswerForm
@@ -47,3 +47,10 @@ class QuestionDetail(DetailView):
 
 def faq(request):
     return render(request, 'faq.html')
+
+
+class QuestionUpdate(UpdateView):
+    model = Question
+    form_class = QuestionForm
+    success_url = '/question/'
+    template_name = 'question_update.html'

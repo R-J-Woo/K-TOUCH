@@ -3,11 +3,13 @@ from django.views.generic import FormView
 from .forms import ReservationForm
 from .models import Reservation
 from user.models import User
+from datetime import datetime
+from django.core.exceptions import ValidationError
 
 # Create your views here.
 
 
-class ReserveView(FormView):  # 예약하는 view
+class ReservationView(FormView):  # 예약하는 view
     template_name = 'make_reservation.html'
     form_class = ReservationForm
     success_url = '/'

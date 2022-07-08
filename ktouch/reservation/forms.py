@@ -1,6 +1,7 @@
 from django import forms
 from .models import Reservation
 from user.models import User
+from datetime import datetime
 
 SERVICE_CHOICES = (
     ('헤어 라인', '헤어 라인'),

@@ -13,4 +13,4 @@ SERVICE_CHOICES = (
 class ReservationForm(forms.Form):
     service = forms.ChoiceField(
         widget=forms.Select(), choices=SERVICE_CHOICES, label='예약 서비스')
-    reservation_date = forms.DateTimeField()
+    reservation_date = forms.DateTimeField(label='예약 날짜/시간')

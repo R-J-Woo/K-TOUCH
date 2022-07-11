@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from user.views import home, RegisterView, LoginView, logout, pricing
+from user.views import home, RegisterView, LoginView, logout, pricing, MyPage
 from question.views import QuestionList, QuestionCreate, QuestionDetail, faq, QuestionUpdate, QuestionDelete
 from answer.views import AnswerCreate
 from reservation.views import ReservationView
@@ -35,4 +35,5 @@ urlpatterns = [
     path('makereservation/', ReservationView.as_view()),
     path('faq/', faq),
     path('answer/create/', AnswerCreate.as_view()),
+    path('mypage/', MyPage.as_view()),
 ]

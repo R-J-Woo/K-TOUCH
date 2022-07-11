@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, UpdateView, DetailView
 from .forms import ReservationForm
 from .models import Reservation
 from user.models import User

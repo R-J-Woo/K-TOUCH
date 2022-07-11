@@ -1,7 +1,9 @@
 from distutils.log import Log
 from django.shortcuts import render, redirect
-from django.views.generic import FormView
+from django.views.generic import FormView, ListView
 from .forms import RegisterForm, LoginForm
+from question.models import Question
+from reservation.models import Reservation
 # Create your views here.
 
 
@@ -34,3 +36,20 @@ def logout(request):
 
 def pricing(request):  # 가격
     return render(request, 'pricing.html')
+
+
+class MyPage(ListView):
+    template_name = 'myhistory.html'
+    paginate_by = 2
+    page_kwarg = 'page'
+
+    def get_queryset(self, **kwargs):
+        queryset = Question.objects.filter(
+            user__uid=self.request.session.get('uid'))
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reservations'] = Reservation.objects.filter(
+            user__uid=self.request.session.get('uid'))
+        return context

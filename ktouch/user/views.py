@@ -1,9 +1,12 @@
 from distutils.log import Log
 from django.shortcuts import render, redirect
 from django.views.generic import FormView, ListView
+from django.utils.decorators import method_decorator
 from .forms import RegisterForm, LoginForm
 from question.models import Question
 from reservation.models import Reservation
+from .models import User
+from .decorators import login_required
 # Create your views here.
 
 
@@ -38,6 +41,7 @@ def pricing(request):  # 가격
     return render(request, 'pricing.html')
 
 
+@method_decorator(login_required, name='dispatch')
 class MyPage(ListView):
     template_name = 'myhistory.html'
     paginate_by = 2

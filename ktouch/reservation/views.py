@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from django.views.generic import FormView, UpdateView, DetailView
+from django.utils.decorators import method_decorator
 from .forms import ReservationForm
 from .models import Reservation
 from user.models import User
 from datetime import datetime
 from django.core.exceptions import ValidationError
+from user.decorators import login_required
 
 # Create your views here.
 
 
+@method_decorator(login_required, name='dispatch')
 class ReservationView(FormView):  # 예약하는 view
     template_name = 'make_reservation.html'
     form_class = ReservationForm

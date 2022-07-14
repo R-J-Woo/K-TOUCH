@@ -6,6 +6,8 @@ from .forms import QuestionForm
 from answer.forms import RegisterForm as AnswerForm
 from answer.models import Answer
 from user.models import User
+from django.utils.decorators import method_decorator
+from user.decorators import login_required
 # Create your views here.
 
 
@@ -17,6 +19,7 @@ class QuestionList(ListView):
     template_name = 'question_list.html'
 
 
+@method_decorator(login_required, name='dispatch')
 class QuestionCreate(FormView):
     template_name = 'question_register.html'
     form_class = QuestionForm
@@ -33,6 +36,7 @@ class QuestionCreate(FormView):
         return super().form_valid(form)
 
 
+@method_decorator(login_required, name='dispatch')
 class QuestionDetail(DetailView):
     template_name = 'question_detail.html'
     queryset = Question.objects.all()
@@ -49,6 +53,7 @@ def faq(request):
     return render(request, 'faq.html')
 
 
+@method_decorator(login_required, name='dispatch')
 class QuestionUpdate(UpdateView):
     model = Question
     form_class = QuestionForm
@@ -56,6 +61,7 @@ class QuestionUpdate(UpdateView):
     template_name = 'question_update.html'
 
 
+@method_decorator(login_required, name='dispatch')
 class QuestionDelete(DeleteView):
     model = Question
     success_url = '/question/'

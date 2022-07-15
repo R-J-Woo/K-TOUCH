@@ -40,16 +40,18 @@
                             <th scope="col">예약자</th>
                             <th scope="col">예약 서비스</th>
                             <th scope="col">예약일</th>
+                            <th scope="col">예약 취소</th>
                         </tr>
                     </thead>
                     <tbody class="text-dark">
                         {% for reservation in reservations %}
                         <tr>
                             <th scope="row">{{ reservation.id }}</th>
-                            <th><a href="/question/{{ question.id }}/" class="text-decoration-none text-dark">
-                                    {{ reservation.user }}</a></th>
+                            <th>{{ reservation.user }}</th>
                             <th>{{ reservation.service }}</th>
                             <th>{{ reservation.reservation_date|date:'Y-m-d H:i' }}</th>
+                            <th><a href="/reservation/{{ reservation.id }}/delete/"
+                                    class="text-blue text-decoration-none">취소하기</a></th>
                         </tr>
                         {% endfor %}
                     </tbody>

@@ -30,6 +30,7 @@
                         <p class="fs-5 mb-4 py-5 px-4 border-top border-bottom border-dark">{{ question.contents }}</p>
 
                     </section>
+                    {% if request.session.uid == question.user.uid %}
                     <span>
                         <button type="submit" class="btn btn-primary mt-3 mb-lg-5"><a
                                 href="/question/{{ question.id }}/update/"
@@ -38,6 +39,7 @@
                                 href="/question/{{ question.id }}/delete/"
                                 class="text-white text-decoration-none">삭제하기</a></button>
                     </span>
+                    {% endif %}
                 </article>
                 <!-- Comments section-->
                 <section>

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import FormView, UpdateView, DetailView
+from django.views.generic.edit import DeleteView
 from django.utils.decorators import method_decorator
 from .forms import ReservationForm
 from .models import Reservation
@@ -26,3 +27,10 @@ class ReservationView(FormView):  # 예약하는 view
         reservation.save()
 
         return super().form_valid(form)
+
+
+@method_decorator(login_required, name='dispatch')
+class ReservationDelete(DeleteView):
+    model = Reservation
+    success_url = '/'
+    template_name = 'reservation_confirm_delete.html'

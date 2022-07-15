@@ -18,7 +18,7 @@ from django.urls import path
 from user.views import home, RegisterView, LoginView, logout, pricing, MyPage
 from question.views import QuestionList, QuestionCreate, QuestionDetail, faq, QuestionUpdate, QuestionDelete
 from answer.views import AnswerCreate
-from reservation.views import ReservationView
+from reservation.views import ReservationView, ReservationDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +33,7 @@ urlpatterns = [
     path('question/<int:pk>/update/', QuestionUpdate.as_view()),
     path('question/<int:pk>/delete/', QuestionDelete.as_view()),
     path('makereservation/', ReservationView.as_view()),
+    path('reservation/<int:pk>/delete/', ReservationDelete.as_view()),
     path('faq/', faq),
     path('answer/create/', AnswerCreate.as_view()),
     path('mypage/', MyPage.as_view()),

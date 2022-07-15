@@ -21,10 +21,11 @@
                         {% for field in form %}
                         <div class="form-floating mb-3">
                             {% if field.name == 'contents' %}
-                            <textarea rows="6" cols="70" name="{{ field.name }}" id="field.id_for_label"></textarea>
+                            <textarea rows="6" cols="70" name="{{ field.name }}" id="field.id_for_label"
+                                placeholder="문의 내용을 입력해주세요"></textarea>
                             {% else %}
+                            <label>문의 유형을 선택해주세요</label>
                             <select class="form-select form-select-sm" name="category">
-                                <option selected">---문의 유형을 선택해주세요---</option>
                                 {% for c1, c2 in form.category.field.choices %}
                                 <option value="{{ c1 }}">{{ c2 }}</option>
                                 {% endfor %}

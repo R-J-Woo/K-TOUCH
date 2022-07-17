@@ -1,7 +1,6 @@
 from django import forms
 from .models import Reservation
 from user.models import User
-from datetime import datetime
 
 SERVICE_CHOICES = (
     ('헤어 라인', '헤어 라인'),
@@ -14,4 +13,4 @@ SERVICE_CHOICES = (
 class ReservationForm(forms.Form):
     service = forms.ChoiceField(
         widget=forms.Select(), choices=SERVICE_CHOICES, label='예약 서비스')
-    reservation_date = forms.DateTimeField(label='예약 날짜/시간')
+    reservation_date = forms.DateField(label='예약 날짜/시간')

@@ -23,7 +23,7 @@
                         {% for question in object_list %}
                         <tr>
                             <th scope="row">{{ question.id }}</th>
-                            <th><a href="/question/{{ question.id }}/" class="text-decoration-none text-dark">
+                            <th><a href="/question/{{ question.id }}/" class="text-decoration-none">
                                     {{ question.user }}</a></th>
                             <th>{{ question.category }}</th>
                             <th>{{ question.register_date|date:'Y-m-d H:i' }}</th>

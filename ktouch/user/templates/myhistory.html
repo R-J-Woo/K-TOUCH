@@ -24,7 +24,7 @@
                         {% for question in object_list %}
                         <tr>
                             <th scope="row">{{ question.id }}</th>
-                            <th><a href="/question/{{ question.id }}/" class="text-decoration-none text-dark">
+                            <th><a href="/question/{{ question.id }}/" class="text-decoration-none">
                                     {{ question.user }}</a></th>
                             <th>{{ question.category }}</th>
                             <th>{{ question.register_date|date:'Y-m-d H:i' }}</th>
@@ -49,9 +49,9 @@
                             <th scope="row">{{ reservation.id }}</th>
                             <th>{{ reservation.user }}</th>
                             <th>{{ reservation.service }}</th>
-                            <th>{{ reservation.reservation_date|date:'Y-m-d H:i' }}</th>
+                            <th>{{ reservation.reservation_date|date:'Y-m-d' }}</th>
                             <th><a href="/reservation/{{ reservation.id }}/delete/"
-                                    class="text-blue text-decoration-none">취소하기</a></th>
+                                    class="text-decoration-none">취소하기</a></th>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -62,14 +62,13 @@
                     <div class="card-body p-4 py-lg-5">
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="text-center">
-                                <div class="h6 fw-bolder">정보를 수정하고 싶으신가요?</div>
-                                <p class="text-muted mb-4">
-                                    수정해주세요!
-                                    <br />
-                                </p>
-                                <div class="d-grid"><button class="btn btn-secondary btn-lg" type="submit"><a
+                                <div class="d-grid"><button class="btn btn-secondary btn-lg mb-2" type="submit"><a
                                             href="/question/create/"
-                                            class="text-decoration-none text-white">수정하기</a></button>
+                                            class="text-decoration-none text-white">문의하기</a></button>
+                                </div>
+                                <div class="d-grid"><button class="btn btn-secondary btn-lg" type="submit"><a
+                                            href="/makereservation/"
+                                            class="text-decoration-none text-white">예약하기</a></button>
                                 </div>
                             </div>
                         </div>

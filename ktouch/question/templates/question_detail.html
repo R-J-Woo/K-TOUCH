@@ -9,7 +9,7 @@
                     <img class="img-fluid rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg"
                         alt="..." />
                     <div class="ms-3">
-                        <div class="fw-bold">{{ request.session.uid }} 님</div>
+                        <div class="fw-bold">{{ question.user }} 님</div>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <!-- Post header-->
                     <header class="mb-4">
                         <!-- Post title-->
-                        <h1 class="fw-bolder mb-1">{{ request.session.uid }} 님의 문의입니다.</h1>
+                        <h1 class="fw-bolder mb-1">{{ question.user }} 님의 문의입니다.</h1>
                         <!-- Post meta content-->
                         <div class="text-muted fst-italic mb-2">{{ question.register_date|date:'Y-m-d H:i' }}</div>
                         <!-- Post categories-->

@@ -16,13 +16,15 @@
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
+                    <div class="mb-3 text-primary">- 예약 후에 사장님께서 고객님께 전화를 드리고 있어요</div>
+                    <div class="mb-3 text-primary">- 예약 시간을 정하기 위함이니 꼭 받아주세요!</div>
                     <form method="POST" action=".">
                         {% csrf_token %}
                         {% for field in form %}
                         <div class="form-floating mb-3">
                             {% if field.name == 'service' %}
                             <select class="form-select form-select-sm" name="{{ field.name }}">
-                                <option selected">---예약하실 서비스를 선택해주세요---</option>
+                                <option selected"><label>---예약하실 서비스를 선택해주세요---</label></option>
                                 {% for a, b in form.service.field.choices %}
                                 <option value="{{ a }}">{{ b }}</option>
                                 {% endfor %}

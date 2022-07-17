@@ -17,7 +17,7 @@ class Reservation(models.Model):
         'user.User', on_delete=models.CASCADE, verbose_name='예약자 이름')
     service = models.CharField(
         max_length=10, choices=SERVICE_CHOICES, verbose_name='예약 서비스')
-    reservation_date = models.DateTimeField(verbose_name='예약 날짜')
+    reservation_date = models.DateField(verbose_name='예약 날짜')
 
     def __str__(self):
         return str(self.user) + str(self.service)

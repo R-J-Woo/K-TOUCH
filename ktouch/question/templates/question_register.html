@@ -24,7 +24,7 @@
                             <textarea rows="6" cols="70" name="{{ field.name }}" id="field.id_for_label"
                                 placeholder="문의 내용을 입력해주세요"></textarea>
                             {% else %}
-                            <label>문의 유형을 선택해주세요</label>
+                            <h6>- 문의 유형을 선택해주세요</h6>
                             <select class="form-select form-select-sm" name="category">
                                 {% for c1, c2 in form.category.field.choices %}
                                 <option value="{{ c1 }}">{{ c2 }}</option>

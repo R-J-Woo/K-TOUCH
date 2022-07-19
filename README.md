@@ -31,7 +31,7 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 
 ### Home
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/799bad73-f978-4984-a313-8daa5ca4f9d5/Untitled.png)
+https://s3-us-west-2.amazonaws.com/secure.notion-static.com/799bad73-f978-4984-a313-8daa5ca4f9d5/Untitled.png
 
 - 메인 페이지입니다.
 - 지금 보시는 화면은 이미 로그인한 상태의 페이지로, 로그인하지 않았다면 밑의 화면을 보실 수 있습니다.

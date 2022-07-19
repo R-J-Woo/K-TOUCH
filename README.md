@@ -36,11 +36,11 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 - 메인 페이지입니다.
 - 지금 보시는 화면은 이미 로그인한 상태의 페이지로, 로그인하지 않았다면 밑의 화면을 보실 수 있습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48d7d7b8-3f55-4cd5-918b-a6b56a721606/Untitled.png)
+![2](https://user-images.githubusercontent.com/68835451/179647454-284b97e4-4fb4-4434-bbb4-18b0cc0c4b81.jpg)
 
 ### Register Page
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/802c85da-c6ef-44e9-9d7f-1e0cd7ec2d9d/Untitled.png)
+![3](https://user-images.githubusercontent.com/68835451/179647456-d0844be6-caa7-4f60-ba3b-568069bd15cc.jpg)
 
 - 회원 가입을 진행하는 페이지입니다.
 - 이미 존재하고 있는 회원 정보라면 이미 아이디가 존재한다는 내용이 뜨도록 에러처리 해두었습니다.
@@ -48,14 +48,14 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 
 ### Login Page
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0369cd61-49d1-4f2f-b55e-7a26aa6dcf21/Untitled.png)
+![4](https://user-images.githubusercontent.com/68835451/179647457-3454b92c-ef51-433d-8754-0fb110df1ca5.jpg)
 
 - 로그인을 진행하는 페이지입니다.
 - 존재하지 않는 회원 정보라면 아이디가 없다는 내용이 뜨도록 에러처리 해두었습니다.
 
 ### 문의 게시판
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eb06e6d1-46f7-4c77-aaea-68155eae2cb0/Untitled.png)
+![5](https://user-images.githubusercontent.com/68835451/179647436-d540966f-3254-4432-80dc-aef4eed1f39e.jpg)
 
 - 회원들의 문의를 조회할 수 있는 문의 게시판입니다.
 - 모든 회원들의 문의를 조회할 수 있도록 하였으며 회원이 아니더라도 볼 수 있도록 권한을 설정하였습니다.
@@ -63,18 +63,18 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 
 ### 문의 세부 내용
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3d0fea6a-5051-4efc-85d5-5fd634b7016f/Untitled.png)
+![6](https://user-images.githubusercontent.com/68835451/179647442-88d9e65d-9b9c-4544-9f09-a557f8697503.jpg)
 
 - 회원들의 문의를 세부하게 볼 수 있는 페이지입니다.
 - 회원의 문의에 대한 답글을 달 수 있는 기능이 있습니다.
 - 문의 세부 내용을 보기 위해서는 로그인을 해야만 하도록 권한 설정을 해두었습니다.
 - 수정하기와 삭제하기는 글을 쓴 당사자일 경우에만 가능하도록 해두었으며 만약 다른 회원일 경우에는 밑의 화면처럼 버튼이 보이지 않도록 하였습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9445a9c2-4b76-4494-8e67-a56d4b9ffab8/Untitled.png)
+![7](https://user-images.githubusercontent.com/68835451/179647443-3d21a85a-42a2-43ea-829a-db780d1ba59b.jpg)
 
 ### 문의하기 페이지
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b381d2ec-2f22-484a-bea4-4487ab764fab/Untitled.png)
+![8](https://user-images.githubusercontent.com/68835451/179647444-4ff1ae53-1c9f-4d2f-86f7-e22ea5edd7b4.jpg)
 
 - 문의하기 페이지입니다.
 - 이 페이지에서는 문의하고 싶은 유형과 문의 내용을 입력받습니다.
@@ -83,7 +83,7 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 
 ### 예약하기 페이지
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1f2e14b-93f1-449f-bd34-40d2fc4c3cd2/Untitled.png)
+![9](https://user-images.githubusercontent.com/68835451/179647446-044912f3-b240-4491-9bc6-369b6d24ca87.jpg)
 
 - 예약하기 페이지입니다.
 - 이 페이지에서는 예약하고 싶은 서비스와 예약 날짜를 입력받습니다.
@@ -92,7 +92,7 @@ Django 와 Python 를 사용하여 백엔드 개발을 진행했습니다.
 
 ### 마이 페이지
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5facb54a-086d-4aeb-9efa-fbc495b5ca07/Untitled.png)
+![10](https://user-images.githubusercontent.com/68835451/179647448-191005d6-2aba-4ebc-a6c8-8cf3c08f1ce9.jpg)
 
 - 마이 페이지입니다.
 - 마이 페이지에서는 회원이 한 문의들과 예약들을 조회할 수 있습니다.

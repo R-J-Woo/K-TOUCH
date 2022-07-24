@@ -44,8 +44,6 @@ def pricing(request):  # 가격
 @method_decorator(login_required, name='dispatch')
 class MyPage(ListView):
     template_name = 'myhistory.html'
-    paginate_by = 2
-    page_kwarg = 'page'
 
     def get_queryset(self, **kwargs):
         queryset = Question.objects.filter(
